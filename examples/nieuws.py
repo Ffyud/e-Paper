@@ -42,7 +42,7 @@ try:
     draw.rectangle([(0,0),(250,30)],fill = "#000000")
 
     headLine = 'Goedemorgen!'
-    subHeadLine = 'MAX 15U+00B0 C'
+    subHeadLine = 'MAX 15°C'
     draw.text((10, 5), headLine, align= "left", font = font14, fill = "#FFFFFF")
     draw.text((135, 5), subHeadLine, align= "left", font = font14, fill = "#FFFFFF")
 
@@ -53,7 +53,7 @@ try:
     # Footer
     footerText = 'Tip: stel prioriteiten'
     draw.rectangle([(0,92),(250,122)],fill = "#000000")
-    draw.text((10, 5), footerText, align= "left", font = font14, fill = "#FFFFFF")
+    draw.text((10, 97), footerText, align= "left", font = font14, fill = "#FFFFFF")
     
     epd.display(epd.getbuffer(image))
     
