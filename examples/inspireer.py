@@ -30,7 +30,6 @@ try:
     
     image = Image.new('1', (epd.height, epd.width), 255)  # Frame eerst poetsen 
     draw = ImageDraw.Draw(image)
-    draw.transpose(image.ROTATE_180) # Draai om zodat kabel boven zit
 
     # Breek zinnen af zodat het past op scherm
     def wrap_by_word(tekst, linebreakLocatie):
