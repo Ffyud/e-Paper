@@ -38,19 +38,25 @@ try:
 
         return resultaat
     
+    # Bovenbalk
     draw.rectangle([(0,0),(250,30)],fill = "#000000")
 
     headLine = 'Goedemorgen!'
-    subHeadLine = 'MAX 15c'
+    subHeadLine = 'MAX 15U+00B0 C'
     draw.text((10, 5), headLine, align= "left", font = font14, fill = "#FFFFFF")
     draw.text((135, 5), subHeadLine, align= "left", font = font14, fill = "#FFFFFF")
 
+    # Middengedeelte
     mainQuote = 'Het is donderdag, bijna weekend!'
     draw.multiline_text((10, 40), wrap_by_word(mainQuote, 3), align= "left", font = font17, fill = 0)
-    epd.display(epd.getbuffer(image))
-    time.sleep(2)
     
-    logging.info("Goto Sleep...")
+    # Footer
+    footerText = 'Tip: stel prioriteiten'
+    draw.rectangle([(0,92),(250,122)],fill = "#000000")
+    draw.text((10, 5), footerText, align= "left", font = font14, fill = "#FFFFFF")
+    
+    epd.display(epd.getbuffer(image))
+    
     epd.sleep()
     time.sleep(3)
     epd.Dev_exit()

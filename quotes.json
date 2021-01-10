@@ -1,0 +1,30 @@
+[{
+    "text" : "Het is al bijna weekend!",
+    "start-tijd" : "07:00",
+    "eind-tijd" : "17:00"
+},
+{
+    "text" : "Maak wat van je dag!",
+    "start-tijd" : "06:00",
+    "eind-tijd" : "08:00"
+},
+{
+    "text" : "Stel prioriteit en ga aan de slag!",
+    "start-tijd" : "09:00",
+    "eind-tijd" : "17:00"
+},
+{
+    "text" : "Neem regelmatig pauze van een scherm!",
+    "start-tijd" : "10:00",
+    "eind-tijd" : "17:00"
+},
+{
+    "text" : "Met een boek kom je tot rust!",
+    "start-tijd" : "20:00",
+    "eind-tijd" : "00:00"
+},
+{
+    "text" : "Diep ademhalen via je buik, dan slaap je goed.",
+    "start-tijd" : "00:00",
+    "eind-tijd" : "06:00"
+}]
