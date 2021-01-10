@@ -30,7 +30,9 @@ try:
     
     image = Image.new('1', (epd.height, epd.width), 255)  # Frame eerst poetsen 
     draw = ImageDraw.Draw(image)
+    draw.transpose(Image.ROTATE_180) # Draai om zodat kabel boven zit
 
+    # Breek zinnen af zodat het past op scherm
     def wrap_by_word(tekst, linebreakLocatie):
         gespletenTekst = tekst.split()
         resultaat = ''
@@ -44,7 +46,7 @@ try:
 
     # Centrale quote
     mainQuote = 'Goedemorgen, het is donderdag en dus bijna weekend! Tip: stel realistische doelen voor je dag.'
-    draw.multiline_text((10, 10), wrap_by_word(mainQuote, 4), align= "left", font = font18, fill = 0)
+    draw.multiline_text((10, 10), wrap_by_word(mainQuote, 4), align= "left", font = font17, fill = 0)
     
     epd.display(epd.getbuffer(image))
     
