@@ -38,11 +38,13 @@ try:
 
         return resultaat
     
-    draw.rectangle([(0,0),(250,30)],fill = "#000000")
+    draw.rectangle([(0,0),(125,30)],fill = "#000000")
+    draw.rectangle([(125,0),(250,30)],fill = "#CCCCCC")
+
     headLine = 'Goedemorgen!'
     subHeadLine = 'MAX 15c'
     draw.text((10, 5), headLine, align= "left", font = font14, fill = "#FFFFFF")
-    draw.text((220, 5), headLine, align= "right", font = font14, fill = "#FFFFFF")
+    draw.text((135, 5), subHeadLine, align= "left", font = font14, fill = "#666666")
 
     mainQuote = 'Het is donderdag, bijna weekend!'
     draw.multiline_text((10, 40), wrap_by_word(mainQuote, 3), align= "left", font = font17, fill = 0)
