@@ -27,12 +27,20 @@ try:
     font15 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 15)
     font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
     
-    logging.info("1.Drawing on the image...")
     image = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame    
     draw = ImageDraw.Draw(image)
+
+    def wrap_by_word(tekst, linebreakLocatie):
+        gespletenTekst = tekst.split()
+        resultaat = ''
+        for i in range(0, len(gespletenTekst), linebreakLocatie):
+            resultaat += ' '.join(gespletenTekst[i:i+linebreakLocatie]) + '\n'
+
+        return resultaat
     
     # draw.rectangle([(0,0),(50,50)],outline = 0)
-    draw.multiline_text((20, 20), 'Politie Grunn beëindigt illegale carmeeting en bekeurt 70 mensen', align= "left", font = font15, fill = 0)
+    nieuwsHeadline = 'Politie Grunn beëindigt illegale carmeeting en bekeurt 70 mensen'
+    draw.multiline_text((20, 20), wrap_by_word(nieuwsHeadline, 3), align= "left", font = font15, fill = 0)
     epd.display(epd.getbuffer(image))
     time.sleep(2)
     
