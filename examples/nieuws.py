@@ -32,7 +32,7 @@ try:
     draw = ImageDraw.Draw(image)
     
     # draw.rectangle([(0,0),(50,50)],outline = 0)
-    draw.multiline_text((20, 20), 'Politie Grunn beëindigt illegale carmeeting en bekeurt 70 mensen', font = font15, fill = 0)
+    draw.multiline_text((20, 20), 'Politie Grunn beëindigt illegale carmeeting en bekeurt 70 mensen', align= "left", font = font15, fill = 0)
     epd.display(epd.getbuffer(image))
     time.sleep(2)
     
