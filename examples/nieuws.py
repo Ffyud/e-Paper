@@ -37,7 +37,7 @@ try:
 
         return resultaat
     
-    draw.rectangle([(0,250),(0,40)],fill = "#000000")
+    draw.rectangle([(0,0),(250,40)],fill = "#000000")
     nieuwsTitel = 'Sikkom'
     draw.text((20, 10), nieuwsTitel, align= "left", font = font17, fill = "#FFFFFF")
 
