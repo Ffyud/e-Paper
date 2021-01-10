@@ -23,6 +23,7 @@ try:
     epd.init(epd.FULL_UPDATE)
     epd.Clear(0xFF)
 
+    font14 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 14)
     font17 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 17)
     font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
     
@@ -37,12 +38,14 @@ try:
 
         return resultaat
     
-    draw.rectangle([(0,0),(250,40)],fill = "#000000")
-    nieuwsTitel = 'Gemeente kroninge'
-    draw.text((20, 10), nieuwsTitel, align= "left", font = font17, fill = "#FFFFFF")
+    draw.rectangle([(0,0),(250,30)],fill = "#000000")
+    headLine = 'Goedemorgen!'
+    subHeadLine = 'MAX 15c'
+    draw.text((10, 5), headLine, align= "left", font = font14, fill = "#FFFFFF")
+    draw.text((220, 5), headLine, align= "right", font = font14, fill = "#FFFFFF")
 
-    nieuwsHeadline = 'Corrupte mense met paspoort lopen bij socialezaken'
-    draw.multiline_text((20, 50), wrap_by_word(nieuwsHeadline, 3), align= "left", font = font17, fill = 0)
+    mainQuote = 'Het is donderdag, bijna weekend!'
+    draw.multiline_text((10, 40), wrap_by_word(mainQuote, 3), align= "left", font = font17, fill = 0)
     epd.display(epd.getbuffer(image))
     time.sleep(2)
     
