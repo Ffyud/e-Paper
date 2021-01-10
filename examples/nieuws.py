@@ -38,9 +38,9 @@ try:
 
         return resultaat
     
-    # draw.rectangle([(0,0),(50,50)],outline = 0)
+    draw.rectangle([(0,250),(0,40)],fill = 0)
     nieuwsTitel = 'OOGtv'
-    draw.text((20, 20), nieuwsTitel, align= "left", font = font17, fill = 0)
+    draw.text((20, 10), nieuwsTitel, align= "left", font = font17, fill = 255)
 
     nieuwsHeadline = 'Politie Grunn beëindigt illegale carmeeting en bekeurt 70 mensen'
     draw.multiline_text((20, 50), wrap_by_word(nieuwsHeadline, 3), align= "left", font = font17, fill = 0)
