@@ -25,6 +25,7 @@ try:
 
     font14 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 14)
     font17 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 17)
+    font18 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 18)
     font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
     
     image = Image.new('1', (epd.height, epd.width), 255)  # Frame eerst poetsen 
@@ -42,8 +43,8 @@ try:
     draw.rectangle([(0,0),(250,122)],width=5, outline = "#000000")
 
     # Centrale quote
-    mainQuote = 'Goede, het is donderdag, bijna weekend! Tip: stel realistische doelen voor je dag.'
-    draw.multiline_text((10, 10), wrap_by_word(mainQuote, 4), align= "left", font = font17, fill = 0)
+    mainQuote = 'Goedemorgen, het is donderdag en dus bijna weekend! Tip: stel realistische doelen voor je dag.'
+    draw.multiline_text((10, 10), wrap_by_word(mainQuote, 4), align= "left", font = font18, fill = 0)
     
     epd.display(epd.getbuffer(image))
     
