@@ -16,7 +16,7 @@ import traceback
 logging.basicConfig(level=logging.DEBUG)
 
 try:
-    logging.info("epd2in13_V2 Demo")
+    logging.info("testje!")
     
     epd = epd2in13_V2.EPD()
     logging.info("init and Clear")
@@ -41,8 +41,7 @@ try:
     draw.pieslice((55, 60, 95, 100), 270, 360, fill = 0)
     draw.polygon([(110,0),(110,50),(150,25)],outline = 0)
     draw.polygon([(190,0),(190,50),(150,25)],fill = 0)
-    draw.text((120, 60), 'e-Paper demo', font = font15, fill = 0)
-    draw.text((110, 90), u'微雪电子', font = font24, fill = 0)
+    draw.text((120, 60), 'Hallo Babbels!', font = font15, fill = 0)
     epd.display(epd.getbuffer(image))
     time.sleep(2)
     
