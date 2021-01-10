@@ -24,7 +24,7 @@ try:
     epd.Clear(0xFF)
 
     # Drawing on the image
-    font15 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 15)
+    font17 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 17)
     font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
     
     image = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame    
@@ -39,8 +39,11 @@ try:
         return resultaat
     
     # draw.rectangle([(0,0),(50,50)],outline = 0)
+    nieuwsTitel = 'OOGtv'
+    draw.text((20, 20), nieuwsTitel, align= "left", font = font17, fill = 0)
+
     nieuwsHeadline = 'Politie Grunn beëindigt illegale carmeeting en bekeurt 70 mensen'
-    draw.multiline_text((20, 20), wrap_by_word(nieuwsHeadline, 3), align= "left", font = font15, fill = 0)
+    draw.multiline_text((20, 50), wrap_by_word(nieuwsHeadline, 3), align= "left", font = font17, fill = 0)
     epd.display(epd.getbuffer(image))
     time.sleep(2)
     
