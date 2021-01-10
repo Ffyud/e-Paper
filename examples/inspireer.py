@@ -45,7 +45,7 @@ try:
     draw.rectangle([(0,0),(250,122)],width=5, outline = "#000000")
 
     # Centrale quote
-    mainQuote = 'Goedemorgen, het is donderdag en dus bijna weekend! Tip: stel realistische doelen voor je dag.'
+    mainQuote = 'Het is donderdag en dus bijna weekend! Tip: stel realistische doelen voor je dag.'
     draw.multiline_text((10, 10), wrap_by_word(mainQuote, 4), align= "left", font = font17, fill = 0)
     
     epd.display(epd.getbuffer(image))
