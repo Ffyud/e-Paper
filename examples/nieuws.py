@@ -38,10 +38,10 @@ try:
         return resultaat
     
     draw.rectangle([(0,0),(250,40)],fill = "#000000")
-    nieuwsTitel = 'Sikkom'
+    nieuwsTitel = 'Gemeente kroninge'
     draw.text((20, 10), nieuwsTitel, align= "left", font = font17, fill = "#FFFFFF")
 
-    nieuwsHeadline = 'Politie Grunn beëindigt illegale carmeeting en bekeurt 70 mensen'
+    nieuwsHeadline = 'Corrupte mense met paspoort lopen bij socialezaken'
     draw.multiline_text((20, 50), wrap_by_word(nieuwsHeadline, 3), align= "left", font = font17, fill = 0)
     epd.display(epd.getbuffer(image))
     time.sleep(2)
