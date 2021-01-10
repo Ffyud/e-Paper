@@ -23,7 +23,7 @@ try:
     epd.init(epd.FULL_UPDATE)
     epd.Clear(0xFF)
 
-    image = Image.open(os.path.join(picdir, 'panda.bmp'))
+    image = Image.open(os.path.join(picdir, 'berg.bmp'))
     epd.display(epd.getbuffer(image))
         
 
