@@ -23,11 +23,10 @@ try:
     epd.init(epd.FULL_UPDATE)
     epd.Clear(0xFF)
 
-    # Drawing on the image
     font17 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 17)
     font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
     
-    image = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame    
+    image = Image.new('1', (epd.height, epd.width), 255)  # Frame eerst poetsen 
     draw = ImageDraw.Draw(image)
 
     def wrap_by_word(tekst, linebreakLocatie):
@@ -39,7 +38,7 @@ try:
         return resultaat
     
     draw.rectangle([(0,250),(0,40)],fill = "#000000")
-    nieuwsTitel = 'OOGtv'
+    nieuwsTitel = 'Sikkom'
     draw.text((20, 10), nieuwsTitel, align= "left", font = font17, fill = "#FFFFFF")
 
     nieuwsHeadline = 'Politie Grunn beëindigt illegale carmeeting en bekeurt 70 mensen'
