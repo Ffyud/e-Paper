@@ -22,8 +22,8 @@ try:
     with open('../quotes.json') as jsonFile:
         quotes = json.load(jsonFile)
 
-    for i in quotes:
-        mainQuote = i['text']
+    for jsonItem in quotes:
+        mainQuote = jsonItem['text']
 
         epd = epd2in13_V2.EPD()
         epd.init(epd.FULL_UPDATE)
@@ -50,7 +50,7 @@ try:
         draw.multiline_text((10, 10), wrap_by_word(mainQuote, 4), align= "left", font = font17, fill = 0)
         
         epd.display(epd.getbuffer(image))
-        
+
         time.sleep(10)
         epd.sleep()
         epd.Dev_exit()
