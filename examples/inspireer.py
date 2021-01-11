@@ -23,11 +23,11 @@ try:
         quotes = json.load(jsonFile)
 
     epd = epd2in13_V2.EPD()
-
+    epd.init(epd.FULL_UPDATE)
+    
     for jsonItem in quotes:
         mainQuote = jsonItem['text']
 
-        epd.init(epd.FULL_UPDATE)
         epd.Clear(0xFF)
 
         font14 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 14)
@@ -52,7 +52,7 @@ try:
         
         epd.display(epd.getbuffer(image))
 
-        time.sleep(10)
+        time.sleep(7200)
         epd.sleep()
     
     epd.Dev_exit()
