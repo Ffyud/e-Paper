@@ -12,45 +12,48 @@ from waveshare_epd import epd2in13_V2
 import time
 from PIL import Image,ImageDraw,ImageFont
 import traceback
+import json
 
 logging.basicConfig(level=logging.DEBUG)
 
+
 try:
-    logging.info("testje!")
     
-    epd = epd2in13_V2.EPD()
-    logging.info("init and Clear")
-    epd.init(epd.FULL_UPDATE)
-    epd.Clear(0xFF)
+    with open('../quotes.json') as jsonFile:
+        quotes = json.load(jsonFile)
 
-    font14 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 14)
-    font17 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 17)
-    font18 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 18)
-    font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
-    
-    image = Image.new('1', (epd.height, epd.width), 255)  # Frame eerst poetsen 
-    draw = ImageDraw.Draw(image)
+    for i in quotes:
+        mainQuote = i['text']
+        time.sleep(10)
 
-    # Breek zinnen af zodat het past op scherm
-    def wrap_by_word(tekst, linebreakLocatie):
-        gespletenTekst = tekst.split()
-        resultaat = ''
-        for i in range(0, len(gespletenTekst), linebreakLocatie):
-            resultaat += ' '.join(gespletenTekst[i:i+linebreakLocatie]) + '\n'
+        epd = epd2in13_V2.EPD()
+        epd.init(epd.FULL_UPDATE)
+        epd.Clear(0xFF)
 
-        return resultaat
-    
-    # Kader
-    draw.rectangle([(0,0),(250,122)],width=5, outline = "#000000")
+        font14 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 14)
+        font17 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 17)
+        font18 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 18)
+        font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
+        
+        image = Image.new('1', (epd.height, epd.width), 255)  # Frame eerst poetsen 
+        draw = ImageDraw.Draw(image)
 
-    # Centrale quote
-    mainQuote = 'Het is donderdag en dus bijna weekend! Tip: stel realistische doelen voor je dag.'
-    draw.multiline_text((10, 10), wrap_by_word(mainQuote, 4), align= "left", font = font17, fill = 0)
-    
-    epd.display(epd.getbuffer(image))
-    
-    epd.sleep()
-    time.sleep(3)
+        # Breek zinnen af zodat het past op scherm
+        def wrap_by_word(tekst, linebreakLocatie):
+            gespletenTekst = tekst.split()
+            resultaat = ''
+            for i in range(0, len(gespletenTekst), linebreakLocatie):
+                resultaat += ' '.join(gespletenTekst[i:i+linebreakLocatie]) + '\n'
+
+            return resultaat
+        
+        # Centrale quote
+        draw.multiline_text((10, 10), wrap_by_word(mainQuote, 4), align= "left", font = font17, fill = 0)
+        
+        epd.display(epd.getbuffer(image))
+        
+        epd.sleep()
+
     epd.Dev_exit()
         
 except IOError as e:
