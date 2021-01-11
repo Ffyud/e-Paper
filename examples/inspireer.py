@@ -22,10 +22,11 @@ try:
     with open('../quotes.json') as jsonFile:
         quotes = json.load(jsonFile)
 
+    epd = epd2in13_V2.EPD()
+
     for jsonItem in quotes:
         mainQuote = jsonItem['text']
 
-        epd = epd2in13_V2.EPD()
         epd.init(epd.FULL_UPDATE)
         epd.Clear(0xFF)
 
@@ -53,13 +54,13 @@ try:
 
         time.sleep(10)
         epd.sleep()
-        epd.Dev_exit()
+    
+    epd.Dev_exit()
         
         
 except IOError as e:
     logging.info(e)
     
-except KeyboardInterrupt:    
-    logging.info("ctrl + c:")
+except KeyboardInterrupt:
     epd2in13_V2.epdconfig.module_exit()
     exit()
