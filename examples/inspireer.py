@@ -24,7 +24,6 @@ try:
 
     for i in quotes:
         mainQuote = i['text']
-        time.sleep(10)
 
         epd = epd2in13_V2.EPD()
         epd.init(epd.FULL_UPDATE)
@@ -52,9 +51,10 @@ try:
         
         epd.display(epd.getbuffer(image))
         
+        time.sleep(10)
         epd.sleep()
-
-    epd.Dev_exit()
+        epd.Dev_exit()
+        
         
 except IOError as e:
     logging.info(e)
