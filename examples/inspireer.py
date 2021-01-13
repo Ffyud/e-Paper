@@ -17,13 +17,11 @@ import logging
 from PIL import Image, ImageDraw, ImageFont
 import traceback
 
-
-
 logging.basicConfig(level=logging.INFO)
 
 def itereer_over_lijst():
     lijst = geef_een_lijst()
-    logging.info('Van start met een lijst van ' + str(len(lijst)) + ' quotes.')
+    logging.debug('Van start met een lijst van ' + str(len(lijst)) + ' quotes.')
     i = 0
     sec_wachten = 5
     max_quotes_per_lijst = 10
@@ -32,7 +30,7 @@ def itereer_over_lijst():
         i = i+1
         time.sleep(sec_wachten)
         if(i >= max_quotes_per_lijst):
-            logging.info('Er zijn ' + str(max_quotes_per_lijst) +
+            logging.debug('Er zijn ' + str(max_quotes_per_lijst) +
                          ' quotes getoond, tijd voor een nieuwe lijst')
             itereer_over_lijst()
 
@@ -66,7 +64,7 @@ def bouw_afbeelding_met_quote(quote):
 
     image = Image.new('1', (epd.height, epd.width), 255)  # Frame eerst poetsen
     draw = ImageDraw.Draw(image)
-    logging.info('Afbeelding maken van de gevonden quote.')
+    logging.debug('Afbeelding maken van de gevonden quote.')
     # Breek zinnen af zodat het past op scherm
     def wrap_by_word(tekst, linebreakLocatie):
         gespletenTekst = tekst.split()
@@ -83,12 +81,15 @@ def bouw_afbeelding_met_quote(quote):
 
     epd.Dev_exit()
 
-try:
-    itereer_over_lijst
+if __name__ == '__main__':
+    itereer_over_lijst()
+    
+# try:
+#     itereer_over_lijst
 
-except IOError as e:
-    logging.info(e)
+# except IOError as e:
+#     logging.info(e)
 
-except KeyboardInterrupt:
-    epd2in13_V2.epdconfig.module_exit()
-    exit()
+# except KeyboardInterrupt:
+#     epd2in13_V2.epdconfig.module_exit()
+#     exit()

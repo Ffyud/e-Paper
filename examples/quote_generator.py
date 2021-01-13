@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO)
 
 def itereer_over_lijst():
     lijst = geef_een_lijst()
-    logging.info('Van start met een lijst van ' + str(len(lijst)) + ' quotes.')
+    logging.debug('Van start met een lijst van ' + str(len(lijst)) + ' quotes.')
     i = 0
     sec_wachten = 5
     max_quotes_per_lijst = 10
@@ -17,7 +17,7 @@ def itereer_over_lijst():
         i = i+1
         time.sleep(sec_wachten)
         if(i >= max_quotes_per_lijst):
-            logging.info('Er zijn ' + str(max_quotes_per_lijst) + ' quotes getoond, tijd voor een nieuwe lijst')
+            logging.debug('Er zijn ' + str(max_quotes_per_lijst) + ' quotes getoond, tijd voor een nieuwe lijst')
             itereer_over_lijst()
 
 def geef_een_lijst():
