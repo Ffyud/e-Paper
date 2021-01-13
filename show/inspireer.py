@@ -20,7 +20,7 @@ import traceback
 logging.basicConfig(level=logging.INFO)
 
 def itereer_over_lijst():
-    lijst = geef_een_lijst()
+    lijst = vul_een_lijst()
     logging.debug('Van start met een lijst van ' + str(len(lijst)) + ' quotes.')
     y = 0
     sec_wachten = 7200
@@ -35,7 +35,7 @@ def itereer_over_lijst():
             itereer_over_lijst()
 
 
-def geef_een_lijst():
+def vul_een_lijst():
     now = datetime.now()
     current_time = now.strftime("%H:%M")
     lijst_wat_te_tonen = []

@@ -1,5 +1,5 @@
 [{
-    "text" : "Stel realistische doelen op een dag.",
+    "text" : "Stel haalbare doelen voor een dag.",
     "time" : "07:00",
     "end-time" : "12:00",
     "day-specific": false,
@@ -15,14 +15,21 @@
 {
     "text" : "Snoozen maakt je niet uitgerust.",
     "time" : "07:00",
-    "end-time" : "12:00",
+    "end-time" : "10:00",
     "day-specific": false,
     "day": ""
 },
 {
-    "text" : "Snoozen maakt je niet uitgerust.",
+    "text" : "Gebruik niet steeds social media, aandacht is kostbaar.",
     "time" : "07:00",
-    "end-time" : "12:00",
+    "end-time" : "20:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Lees op een vast moment het nieuws, aandacht is kostbaar.",
+    "time" : "07:00",
+    "end-time" : "20:00",
     "day-specific": false,
     "day": ""
 },
@@ -76,7 +83,7 @@
     "day": ""
 },
 {
-    "text" : "Relativeer en neem het niet te serieus.",
+    "text" : "Relativeer en neem dingen niet te serieus.",
     "time" : "12:00",
     "end-time" : "20:00",
     "day-specific": false,
@@ -100,13 +107,6 @@
     "text" : "Met een boek kom je tot rust.",
     "time" : "19:00",
     "end-time" : "07:00",
-    "day-specific": false,
-    "day": ""
-},
-{
-    "text" : "Doe ook iets wat jij graag wil.",
-    "time" : "07:00",
-    "end-time" : "22:00",
     "day-specific": false,
     "day": ""
 },
