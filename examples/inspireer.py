@@ -71,7 +71,7 @@ def bouw_afbeelding_met_quote(quote):
         gespletenTekst = tekst.split()
         resultaat = ''
         for i in range(0, len(gespletenTekst), linebreakLocatie):
-            resultaat += ' '.join(gespletenTekst[i:i +linebreakLocatie]) + '\n'
+            resultaat += ' '.join(gespletenTekst[i:i+linebreakLocatie]) + '\n'
             return resultaat
 
     # Centrale quote
@@ -83,7 +83,7 @@ def bouw_afbeelding_met_quote(quote):
 if __name__ == '__main__':
     itereer_over_lijst()
     # epd.Dev_exit()
-    
+
 # try:
 #     itereer_over_lijst
 
