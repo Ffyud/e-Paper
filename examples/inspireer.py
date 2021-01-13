@@ -65,6 +65,7 @@ def bouw_afbeelding_met_quote(quote):
     image = Image.new('1', (epd.height, epd.width), 255)  # Frame eerst poetsen
     draw = ImageDraw.Draw(image)
     logging.debug('Afbeelding maken van de gevonden quote.')
+    
     # Breek zinnen af zodat het past op scherm
     def wrap_by_word(tekst, linebreakLocatie):
         gespletenTekst = tekst.split()
@@ -73,17 +74,16 @@ def bouw_afbeelding_met_quote(quote):
             resultaat += ' '.join(gespletenTekst[i:i +linebreakLocatie]) + '\n'
             return resultaat
 
-        # Centrale quote
-        draw.multiline_text((10, 10), wrap_by_word(quote, 4), align="left", font=font17, fill=0)
+    # Centrale quote
+    draw.multiline_text((10, 10), wrap_by_word(quote, 4), align="left", font=font17, fill=0)
 
-        epd.display(epd.getbuffer(image))
-        epd.sleep()
-
+    epd.display(epd.getbuffer(image))
+    epd.sleep()
     epd.Dev_exit()
 
 if __name__ == '__main__':
     itereer_over_lijst()
-    
+
 # try:
 #     itereer_over_lijst
 
