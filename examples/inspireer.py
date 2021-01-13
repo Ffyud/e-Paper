@@ -22,14 +22,14 @@ logging.basicConfig(level=logging.INFO)
 def itereer_over_lijst():
     lijst = geef_een_lijst()
     logging.debug('Van start met een lijst van ' + str(len(lijst)) + ' quotes.')
-    i = 0
+    y = 0
     sec_wachten = 5
-    max_quotes_per_lijst = 10
+    max_quotes_per_lijst = 3
     for quote in lijst:
         bouw_afbeelding_met_quote(quote)
-        i = i+1
+        y = y+1
         time.sleep(sec_wachten)
-        if(i >= max_quotes_per_lijst):
+        if(y >= max_quotes_per_lijst):
             logging.debug('Er zijn ' + str(max_quotes_per_lijst) +
                          ' quotes getoond, tijd voor een nieuwe lijst')
             itereer_over_lijst()
@@ -43,12 +43,12 @@ def geef_een_lijst():
     with open('../quotes.json') as jsonFile:
         quotes = json.load(jsonFile)
 
-    for i in quotes:
-        start_time = i['time']
-        end_time = i['end-time']
+    for j in quotes:
+        start_time = j['time']
+        end_time = j['end-time']
         if(current_time > start_time and current_time < end_time):
             # controle op dag-specifieke quotes toevoegen
-            quote = i['text']
+            quote = j['text']
             lijst_wat_te_tonen.append(quote)
 
     random.shuffle(lijst_wat_te_tonen)
