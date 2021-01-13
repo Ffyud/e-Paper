@@ -1,40 +1,77 @@
 [{
     "text" : "Het is al bijna weekend.",
-    "start-tijd" : "07:00",
-    "eind-tijd" : "17:00"
+    "time" : "07:00",
+    "end-time" : "15:00",
+    "day-specific" : true,
+    "day" : "thursday"
 },
 {
-    "text" : "Stel realistische doel op een dag.",
-    "start-tijd" : "07:00",
-    "eind-tijd" : "17:00"
+    "text" : "Stel realistische doelen op een dag.",
+    "time" : "07:00",
+    "end-time" : "15:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Een quote per dag bla bla 1.",
+    "time" : "07:00",
+    "end-time" : "12:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Een quote per dag bla bla 2.",
+    "time" : "07:00",
+    "end-time" : "15:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Een quote per dag bla bla 3.",
+    "time" : "07:00",
+    "end-time" : "12:00",
+    "day-specific": false,
+    "day": ""
 },
 {
     "text" : "Bewegen is goed voor lichaam en geest.",
-    "start-tijd" : "07:00",
-    "eind-tijd" : "17:00"
+    "time" : "07:00",
+    "end-time" : "12:00",
+    "day-specific": false,
+    "day": ""
 },
 {
     "text" : "Maak wat van je dag.",
-    "start-tijd" : "06:00",
-    "eind-tijd" : "08:00"
+    "time" : "07:00",
+    "end-time" : "12:00",
+    "day-specific": false,
+    "day": ""
 },
 {
-    "text" : "Stel prioriteit en ga aan de slag.",
-    "start-tijd" : "09:00",
-    "eind-tijd" : "17:00"
+    "text" : "Stel prioriteiten en ga aan de slag.",
+    "time" : "12:00",
+    "end-time" : "13:00",
+    "day-specific": false,
+    "day": ""
 },
 {
     "text" : "Neem regelmatig pauze van een scherm.",
-    "start-tijd" : "10:00",
-    "eind-tijd" : "17:00"
+    "time" : "12:00",
+    "end-time" : "13:00",
+    "day-specific": false,
+    "day": ""
 },
 {
     "text" : "Met een boek kom je tot rust.",
-    "start-tijd" : "20:00",
-    "eind-tijd" : "00:00"
+    "time" : "12:00",
+    "end-time" : "13:00",
+    "day-specific": false,
+    "day": ""
 },
 {
     "text" : "Haal diep adem via je buik.",
-    "start-tijd" : "00:00",
-    "eind-tijd" : "06:00"
+    "time" : "12:00",
+    "end-time" : "12:00",
+    "day-specific": false,
+    "day": ""
 }]
