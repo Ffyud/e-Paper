@@ -23,7 +23,7 @@ def itereer_over_lijst():
     lijst = geef_een_lijst()
     logging.debug('Van start met een lijst van ' + str(len(lijst)) + ' quotes.')
     y = 0
-    sec_wachten = 5
+    sec_wachten = 7200
     max_quotes_per_lijst = 3
     for quote in lijst:
         bouw_afbeelding_met_quote(quote)
@@ -72,7 +72,7 @@ def bouw_afbeelding_met_quote(quote):
         resultaat = ''
         for i in range(0, len(gespletenTekst), linebreakLocatie):
             resultaat += ' '.join(gespletenTekst[i:i+linebreakLocatie]) + '\n'
-            return resultaat
+        return resultaat
 
     # Centrale quote
     draw.multiline_text((10, 10), wrap_by_word(quote, 4), align="left", font=font17, fill=0)
