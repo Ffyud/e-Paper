@@ -79,11 +79,11 @@ def bouw_afbeelding_met_quote(quote):
 
     epd.display(epd.getbuffer(image))
     epd.sleep()
-    epd.Dev_exit()
 
 if __name__ == '__main__':
     itereer_over_lijst()
-
+    # epd.Dev_exit()
+    
 # try:
 #     itereer_over_lijst
 
