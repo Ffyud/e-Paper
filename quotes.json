@@ -1,42 +1,49 @@
 [{
-    "text" : "Het is al bijna weekend.",
-    "time" : "07:00",
-    "end-time" : "15:00",
-    "day-specific" : true,
-    "day" : "thursday"
-},
-{
     "text" : "Stel realistische doelen op een dag.",
     "time" : "07:00",
-    "end-time" : "15:00",
+    "end-time" : "12:00",
     "day-specific": false,
     "day": ""
 },
 {
-    "text" : "Een quote per dag bla bla 1.",
+    "text" : "Door vroeg op te staan heb je veel aan je dag.",
+    "time" : "07:00",
+    "end-time" : "10:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Snoozen maakt je niet uitgerust.",
     "time" : "07:00",
     "end-time" : "12:00",
     "day-specific": false,
     "day": ""
 },
 {
-    "text" : "Een quote per dag bla bla 2.",
+    "text" : "Snoozen maakt je niet uitgerust.",
     "time" : "07:00",
-    "end-time" : "15:00",
+    "end-time" : "12:00",
     "day-specific": false,
     "day": ""
 },
 {
-    "text" : "Een quote per dag bla bla 3.",
-    "time" : "07:00",
-    "end-time" : "12:00",
+    "text" : "Wijsheid is het hoogste goed van het menselijk denken.",
+    "time" : "12:00",
+    "end-time" : "22:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Niet wie te weinig heeft is arm, maar wie meer wil hebben.",
+    "time" : "12:00",
+    "end-time" : "23:00",
     "day-specific": false,
     "day": ""
 },
 {
     "text" : "Bewegen is goed voor lichaam en geest.",
-    "time" : "07:00",
-    "end-time" : "12:00",
+    "time" : "12:00",
+    "end-time" : "21:00",
     "day-specific": false,
     "day": ""
 },
@@ -49,29 +56,78 @@
 },
 {
     "text" : "Stel prioriteiten en ga aan de slag.",
+    "time" : "07:00",
+    "end-time" : "14:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Niet te streng zijn voor jezelf.",
     "time" : "12:00",
-    "end-time" : "13:00",
+    "end-time" : "20:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Benadruk ook de positieve kanten van iets.",
+    "time" : "12:00",
+    "end-time" : "20:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Relativeer en neem het niet te serieus.",
+    "time" : "12:00",
+    "end-time" : "20:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Stel prioriteiten en ga aan de slag.",
+    "time" : "07:00",
+    "end-time" : "14:00",
     "day-specific": false,
     "day": ""
 },
 {
     "text" : "Neem regelmatig pauze van een scherm.",
     "time" : "12:00",
-    "end-time" : "13:00",
+    "end-time" : "18:00",
     "day-specific": false,
     "day": ""
 },
 {
     "text" : "Met een boek kom je tot rust.",
-    "time" : "12:00",
-    "end-time" : "13:00",
+    "time" : "19:00",
+    "end-time" : "07:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Doe ook iets wat jij graag wil.",
+    "time" : "07:00",
+    "end-time" : "22:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Pieker niet, maar haal adem.",
+    "time" : "22:00",
+    "end-time" : "07:00",
+    "day-specific": false,
+    "day": ""
+},
+{
+    "text" : "Slaap is de beste meditatie.",
+    "time" : "22:00",
+    "end-time" : "07:00",
     "day-specific": false,
     "day": ""
 },
 {
     "text" : "Haal diep adem via je buik.",
-    "time" : "12:00",
-    "end-time" : "12:00",
+    "time" : "22:00",
+    "end-time" : "07:00",
     "day-specific": false,
     "day": ""
 }]

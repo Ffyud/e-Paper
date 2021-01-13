@@ -48,6 +48,7 @@ def geef_een_lijst():
         end_time = j['end-time']
         if(current_time > start_time and current_time < end_time):
             # controle op dag-specifieke quotes toevoegen
+            # controle dat er altijd iets in de lijst komt ongeacht de tijd
             quote = j['text']
             lijst_wat_te_tonen.append(quote)
 
