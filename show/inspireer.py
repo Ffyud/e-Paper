@@ -23,7 +23,7 @@ def itereer_over_lijst():
     lijst = vul_een_lijst()
     logging.debug('Van start met een lijst van ' + str(len(lijst)) + ' quotes.')
     y = 0
-    sec_wachten = 15
+    sec_wachten = 3500
     max_quotes_per_lijst = 3
     for quote in lijst:
         bouw_afbeelding_met_quote(quote)
@@ -76,11 +76,7 @@ def bouw_afbeelding_met_quote(quote):
         return resultaat
 
     # Centrale quote
-    draw.multiline_text((20, 20), wrap_by_word(quote, 4), align="left", font=font17, fill="#FFFFFF")
-
-    # Achtergrond
-    bmp = Image.open(os.path.join(picdir, 'berg.bmp'))
-    image.paste(bmp, (0,0)) 
+    draw.multiline_text((20, 20), wrap_by_word(quote, 4), align="left", font=font17)
 
     epd.display(epd.getbuffer(image))
 
