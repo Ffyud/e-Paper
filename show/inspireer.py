@@ -85,7 +85,7 @@ def bouw_afbeelding_met_quote(quote):
     
     epd.displayPartBaseImage(epd.getbuffer(kader_image))
     
-    epd.init(epd.PART_UPDATE)
+    # epd.init(epd.PART_UPDATE)
     kader_draw.rectangle([(0,0),(250,30)],fill=0, outline="#000000")
     epd.displayPartial(epd.getbuffer(kader_image))
     epd.sleep()
