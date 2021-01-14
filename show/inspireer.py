@@ -76,12 +76,12 @@ def bouw_afbeelding_met_quote(quote):
         return resultaat
 
     # Centrale quote
-    draw.multiline_text((20, 20), wrap_by_word(quote, 4), align="left", font=font17, fill="#FFFFFF", stroke_width="4", strike_fill="#000000")
+    draw.multiline_text((20, 20), wrap_by_word(quote, 4), align="left", font=font17, fill="#FFFFFF", stroke_width=4, strike_fill="#000000")
 
     # Achtergrond
     bmp = Image.open(os.path.join(picdir, 'berg.bmp'))
     image.paste(bmp, (0,0)) 
-    
+
     epd.display(epd.getbuffer(image))
 
     epd.sleep()
