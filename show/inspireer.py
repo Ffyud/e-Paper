@@ -23,7 +23,7 @@ def itereer_over_lijst():
     lijst = vul_een_lijst()
     logging.debug('Van start met een lijst van ' + str(len(lijst)) + ' quotes.')
     y = 0
-    sec_wachten = 7200
+    sec_wachten = 15
     max_quotes_per_lijst = 3
     for quote in lijst:
         bouw_afbeelding_met_quote(quote)
@@ -76,10 +76,21 @@ def bouw_afbeelding_met_quote(quote):
         return resultaat
 
     # Centrale quote
-    draw.multiline_text((10, 10), wrap_by_word(quote, 4), align="left", font=font17, fill=0)
+    draw.multiline_text((20, 20), wrap_by_word(quote, 4), align="left", font=font17, fill=0)
 
     epd.display(epd.getbuffer(image))
+    
+    kader_image = Image.new('1', (epd.height, epd.width), 255)
+    kader_draw = ImageDraw.Draw(kader_image)
+    
+    epd.displayPartBaseImage(epd.getbuffer(kader_image))
+    
+    epd.init(epd.PART_UPDATE)
+    kader_draw.rectangle([(0,0),(250,30)],fill=0, outline="#000000")
+    epd.displayPartial(epd.getbuffer(kader_image))
     epd.sleep()
+
+
 
 if __name__ == '__main__':
     itereer_over_lijst()
